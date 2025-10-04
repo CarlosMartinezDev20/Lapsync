@@ -21,46 +21,114 @@ Está diseñada para estudiantes, administradores y superadministradores, facili
 
 ## ✨ Características Principales
 
-- 🔐 **Autenticación con Google**: acceso seguro usando correos institucionales.  
-- 📦 **Gestión de préstamos**: solicitud, seguimiento y estados en tiempo real.  
-- ⚠️ **Control de sanciones**: registro automático de infracciones y penalizaciones.  
-- 🧰 **Panel administrativo**: control de laptops, usuarios y sanciones.  
-- 👑 **Rol Super Admin**: gestión completa del sistema y creación de administradores.  
-- 📊 **Interfaz moderna y responsiva** gracias a Thymeleaf y Bootstrap.  
+- 🔐 **Autenticación con Google**: acceso seguro usando correos institucionales.
+- 📦 **Gestión de préstamos**: solicitud, seguimiento y estados en tiempo real.
+- ⚠️ **Control de sanciones**: registro automático de infracciones y penalizaciones.
+- 🧰 **Panel administrativo**: control de laptops, usuarios y sanciones.
+- 👑 **Rol Super Admin**: gestión completa del sistema y creación de administradores.
+- 📊 **Interfaz moderna y responsiva** gracias a Thymeleaf y Bootstrap.
 
 ---
 
 ## 👤 Roles de Usuario
 
-- 👨‍🎓 **Estudiante:** Solicita laptops, revisa el estado de sus préstamos y consulta sanciones.  
-- 👨‍💼 **Administrador:** Gestiona el inventario, solicitudes, devoluciones y sanciones.  
+- 👨‍🎓 **Estudiante:** Solicita laptops, revisa el estado de sus préstamos y consulta sanciones.
+- 👨‍💼 **Administrador:** Gestiona el inventario, solicitudes, devoluciones y sanciones.
 - 👑 **Super Administrador:** Control total del sistema y creación de nuevos administradores.
 
 ---
 
-### 🔑 Inicio de Sesión
-![Login](docs/screenshots/estudiantes/login.png)
+## 🖼️ Galería
 
-### 🏠 Panel del Estudiante
-![Home](docs/screenshots/estudiantes/estudiante-home.png)
+> Vista rápida de 4 pantallas clave. Abre cada sección para ver más por rol.
 
-### 📋 Solicitud de Préstamo
-![Solicitud](docs/screenshots/estudiantes/solicitud-prestamo.png)
+**Login**  
+<img src="docs/screenshots/estudiantes/login.png" alt="Login" width="720" />
 
-### 🕒 Mis Préstamos
-![Préstamos](docs/screenshots/estudiantes/mis-prestamos.png)
+**Panel Estudiante**  
+<img src="docs/screenshots/estudiantes/estudiante-home.png" alt="Home estudiante" width="720" />
 
-### ⚠️ Sanciones
-![Sanciones](docs/screenshots/estudiantes/mis-sanciones.png)
+**Solicitud de préstamo**  
+<img src="docs/screenshots/estudiantes/solicitud-prestamo.png" alt="Solicitud de préstamo" width="720" />
+
+**Mis préstamos**  
+<img src="docs/screenshots/estudiantes/mis-prestamos.png" alt="Mis préstamos" width="720" />
+
+---
+
+### Estudiante
+<details open>
+  <summary><strong>Ver todas las pantallas del Estudiante</strong></summary>
+  <br/>
+
+  <div align="center">
+    <figure style="display:inline-block; margin:6px; text-align:center;">
+      <img src="docs/screenshots/estudiantes/login.png" alt="Login" width="360">
+      <figcaption>Login</figcaption>
+    </figure>
+    <figure style="display:inline-block; margin:6px; text-align:center;">
+      <img src="docs/screenshots/estudiantes/estudiante-home.png" alt="Home estudiante" width="360">
+      <figcaption>Inicio / Panel</figcaption>
+    </figure>
+    <figure style="display:inline-block; margin:6px; text-align:center;">
+      <img src="docs/screenshots/estudiantes/solicitud-prestamo.png" alt="Solicitud de préstamo" width="360">
+      <figcaption>Solicitud</figcaption>
+    </figure>
+    <figure style="display:inline-block; margin:6px; text-align:center;">
+      <img src="docs/screenshots/estudiantes/mis-prestamos.png" alt="Mis préstamos" width="360">
+      <figcaption>Mis préstamos</figcaption>
+    </figure>
+    <figure style="display:inline-block; margin:6px; text-align:center;">
+      <img src="docs/screenshots/estudiantes/mis-sanciones.png" alt="Mis sanciones" width="360">
+      <figcaption>Mis sanciones</figcaption>
+    </figure>
+  </div>
+</details>
+
+### Administrador
+<details>
+  <summary><strong>Ver pantallas del Administrador</strong></summary>
+  <br/>
+  <div align="center">
+    <figure style="display:inline-block; margin:6px; text-align:center;">
+      <img src="docs/screenshots/administrador/prestamosA.png" alt="Préstamos (admin)" width="360">
+      <figcaption>Préstamos</figcaption>
+    </figure>
+    <figure style="display:inline-block; margin:6px; text-align:center;">
+      <img src="docs/screenshots/administrador/laptopsA.png" alt="Inventario de laptops" width="360">
+      <figcaption>Inventario</figcaption>
+    </figure>
+    <figure style="display:inline-block; margin:6px; text-align:center;">
+      <img src="docs/screenshots/administrador/sancionesA.png" alt="Sanciones (admin)" width="360">
+      <figcaption>Sanciones</figcaption>
+    </figure>
+  </div>
+</details>
+
+### Super Administrador
+<details>
+  <summary><strong>Ver pantallas del Super Administrador</strong></summary>
+  <br/>
+  <div align="center">
+    <figure style="display:inline-block; margin:6px; text-align:center;">
+      <img src="docs/screenshots/superadministrador/super-home.png" alt="Home Super Admin" width="360">
+      <figcaption>Home</figcaption>
+    </figure>
+    <figure style="display:inline-block; margin:6px; text-align:center;">
+      <img src="docs/screenshots/superadministrador/administradores.png" alt="Gestión de administradores" width="360">
+      <figcaption>Administradores</figcaption>
+    </figure>
+  </div>
+</details>
 
 ---
 
 ## ⚙️ Configuración del Proyecto
 
 ### 📦 Requisitos Previos
-- ☕ Java 17+  
-- 🧰 Maven 3.9+  
-- 🐘 SQL Server instalado  
+- ☕ Java 17+
+- 🧰 Maven 3.9+
+- 🐘 SQL Server instalado
 - 🔑 Credenciales de Google OAuth2 configuradas
 
 ### ⚙️ Configuración de `application.properties`
@@ -78,7 +146,6 @@ spring.security.oauth2.client.registration.google.client-secret=TU_CLIENT_SECRET
 ```
 
 ⚠️ **Importante:** Crea la base de datos manualmente antes de ejecutar el proyecto.
-
 ```sql
 CREATE DATABASE lapsync;
 ```
@@ -89,22 +156,18 @@ CREATE DATABASE lapsync;
 
 1. Clonar el repositorio:
 ```bash
-git clone https://github.com/<tu-usuario>/LapSync.git
+git clone https://github.com/CarlosMartinezDev20/Lapsync.git
 cd LapSync
 ```
-
 2. Ejecutar la aplicación:
 ```bash
 ./mvnw spring-boot:run
 ```
-
 3. Abrir en el navegador:
 ```
 http://localhost:8080/login
 ```
-
 4. ⚠️ Crear usuario `SUPER_ADMIN` en la base de datos para acceder al panel administrativo:
-
 ```sql
 INSERT INTO usuarios (nombre, email, rol) 
 VALUES ('Administrador Principal', 'admin@tu-dominio.com', 'SUPER_ADMIN');
@@ -113,8 +176,6 @@ VALUES ('Administrador Principal', 'admin@tu-dominio.com', 'SUPER_ADMIN');
 ---
 
 ## 🧪 Pruebas
-
-Para ejecutar pruebas:
 ```bash
 ./mvnw test
 ```
@@ -122,18 +183,15 @@ Para ejecutar pruebas:
 ---
 
 ## 📍 Roadmap
-
-- 📩 Notificaciones automáticas por correo.  
-- 📊 Generación de reportes PDF/CSV.  
-- 📱 PWA / Modo móvil.  
-- 🧾 Auditoría de acciones administrativas.  
+- 📩 Notificaciones automáticas por correo.
+- 📊 Generación de reportes PDF/CSV.
+- 📱 PWA / Modo móvil.
+- 🧾 Auditoría de acciones administrativas.
 
 ---
 
 ## 📜 Licencia
-
 Este proyecto está bajo la licencia **MIT**. Puedes usarlo, modificarlo y distribuirlo libremente con fines académicos o personales.
 
----
 
 💡 *LapSync busca mejorar el acceso a la tecnología en entornos educativos, simplificando el proceso de préstamos de equipos y creando una experiencia moderna, fluida y segura para todos los usuarios.*
