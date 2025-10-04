@@ -42,7 +42,7 @@ Está diseñada para estudiantes, administradores y superadministradores, facili
 ![Login](docs/screenshots/estudiantes/login.png)
 
 ### 🏠 Panel del Estudiante
-![Home](docs/screenshots/estudiantes/home-estudiante.png)
+![Home](docs/screenshots/estudiantes/estudiante-home.png)
 
 ### 📋 Solicitud de Préstamo
 ![Solicitud](docs/screenshots/estudiantes/solicitud-prestamo.png)
