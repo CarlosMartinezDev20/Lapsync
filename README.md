@@ -39,19 +39,19 @@ Está diseñada para estudiantes, administradores y superadministradores, facili
 ---
 
 ### 🔑 Inicio de Sesión
-![Login](docs/screenshots/login.png)
+![Login](docs/screenshots/estudiantes/login.png)
 
 ### 🏠 Panel del Estudiante
-![Home](docs/screenshots/home-estudiante.png)
+![Home](docs/screenshots/estudiantes/home-estudiante.png)
 
 ### 📋 Solicitud de Préstamo
-![Solicitud](docs/screenshots/solicitud-prestamo.png)
+![Solicitud](docs/screenshots/estudiantes/solicitud-prestamo.png)
 
 ### 🕒 Mis Préstamos
-![Préstamos](docs/screenshots/mis-prestamos.png)
+![Préstamos](docs/screenshots/estudiantes/mis-prestamos.png)
 
 ### ⚠️ Sanciones
-![Sanciones](docs/screenshots/mis-sanciones.png)
+![Sanciones](docs/screenshots/estudiantes/mis-sanciones.png)
 
 ---
 
