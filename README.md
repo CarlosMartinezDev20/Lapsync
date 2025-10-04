@@ -38,88 +38,24 @@ Está diseñada para estudiantes, administradores y superadministradores, facili
 
 ---
 
-## 🖼️ Galería
+# Galería completa – LapSync
 
-> Vista rápida de 4 pantallas clave. Abre cada sección para ver más por rol.
+## Estudiante
 
-**Login**  
-<img src="docs/screenshots/estudiantes/login.png" alt="Login" width="720" />
+![Login](docs/screenshots/estudiantes/login.png)
+![Home](docs/screenshots/estudiantes/estudiante-home.png)
+![Solicitud](docs/screenshots/estudiantes/solicitud-prestamo.png)
+![Préstamos](docs/screenshots/estudiantes/mis-prestamos.png)
+![Sanciones](docs/screenshots/estudiantes/mis-sanciones.png)
 
-**Panel Estudiante**  
-<img src="docs/screenshots/estudiantes/estudiante-home.png" alt="Home estudiante" width="720" />
+## Administrador
+![Prestamos](docs/screenshots/administrador/prestamosA.png)
+![Laptos](docs/screenshots/administrador/laptopsA.png)
+![Sanciones](docs/screenshots/administrador/sancionesA.png)
 
-**Solicitud de préstamo**  
-<img src="docs/screenshots/estudiantes/solicitud-prestamo.png" alt="Solicitud de préstamo" width="720" />
-
-**Mis préstamos**  
-<img src="docs/screenshots/estudiantes/mis-prestamos.png" alt="Mis préstamos" width="720" />
-
----
-
-### Estudiante
-<details open>
-  <summary><strong>Ver todas las pantallas del Estudiante</strong></summary>
-  <br/>
-
-  <div align="center">
-    <figure style="display:inline-block; margin:6px; text-align:center;">
-      <img src="docs/screenshots/estudiantes/login.png" alt="Login" width="360">
-      <figcaption>Login</figcaption>
-    </figure>
-    <figure style="display:inline-block; margin:6px; text-align:center;">
-      <img src="docs/screenshots/estudiantes/estudiante-home.png" alt="Home estudiante" width="360">
-      <figcaption>Inicio / Panel</figcaption>
-    </figure>
-    <figure style="display:inline-block; margin:6px; text-align:center;">
-      <img src="docs/screenshots/estudiantes/solicitud-prestamo.png" alt="Solicitud de préstamo" width="360">
-      <figcaption>Solicitud</figcaption>
-    </figure>
-    <figure style="display:inline-block; margin:6px; text-align:center;">
-      <img src="docs/screenshots/estudiantes/mis-prestamos.png" alt="Mis préstamos" width="360">
-      <figcaption>Mis préstamos</figcaption>
-    </figure>
-    <figure style="display:inline-block; margin:6px; text-align:center;">
-      <img src="docs/screenshots/estudiantes/mis-sanciones.png" alt="Mis sanciones" width="360">
-      <figcaption>Mis sanciones</figcaption>
-    </figure>
-  </div>
-</details>
-
-### Administrador
-<details>
-  <summary><strong>Ver pantallas del Administrador</strong></summary>
-  <br/>
-  <div align="center">
-    <figure style="display:inline-block; margin:6px; text-align:center;">
-      <img src="docs/screenshots/administrador/prestamosA.png" alt="Préstamos (admin)" width="360">
-      <figcaption>Préstamos</figcaption>
-    </figure>
-    <figure style="display:inline-block; margin:6px; text-align:center;">
-      <img src="docs/screenshots/administrador/laptopsA.png" alt="Inventario de laptops" width="360">
-      <figcaption>Inventario</figcaption>
-    </figure>
-    <figure style="display:inline-block; margin:6px; text-align:center;">
-      <img src="docs/screenshots/administrador/sancionesA.png" alt="Sanciones (admin)" width="360">
-      <figcaption>Sanciones</figcaption>
-    </figure>
-  </div>
-</details>
-
-### Super Administrador
-<details>
-  <summary><strong>Ver pantallas del Super Administrador</strong></summary>
-  <br/>
-  <div align="center">
-    <figure style="display:inline-block; margin:6px; text-align:center;">
-      <img src="docs/screenshots/superadministrador/super-home.png" alt="Home Super Admin" width="360">
-      <figcaption>Home</figcaption>
-    </figure>
-    <figure style="display:inline-block; margin:6px; text-align:center;">
-      <img src="docs/screenshots/superadministrador/administradores.png" alt="Gestión de administradores" width="360">
-      <figcaption>Administradores</figcaption>
-    </figure>
-  </div>
-</details>
+## Super Admin
+![Home](docs/screenshots/superadministrador/super-home.png)
+![Sanciones](docs/screenshots/superadministrador/administradores.png)
 
 ---
 
@@ -146,6 +82,7 @@ spring.security.oauth2.client.registration.google.client-secret=TU_CLIENT_SECRET
 ```
 
 ⚠️ **Importante:** Crea la base de datos manualmente antes de ejecutar el proyecto.
+
 ```sql
 CREATE DATABASE lapsync;
 ```
@@ -159,15 +96,19 @@ CREATE DATABASE lapsync;
 git clone https://github.com/CarlosMartinezDev20/Lapsync.git
 cd LapSync
 ```
+
 2. Ejecutar la aplicación:
 ```bash
 ./mvnw spring-boot:run
 ```
+
 3. Abrir en el navegador:
 ```
 http://localhost:8080/login
 ```
+
 4. ⚠️ Crear usuario `SUPER_ADMIN` en la base de datos para acceder al panel administrativo:
+
 ```sql
 INSERT INTO usuarios (nombre, email, rol) 
 VALUES ('Administrador Principal', 'admin@tu-dominio.com', 'SUPER_ADMIN');
@@ -176,6 +117,8 @@ VALUES ('Administrador Principal', 'admin@tu-dominio.com', 'SUPER_ADMIN');
 ---
 
 ## 🧪 Pruebas
+
+Para ejecutar pruebas:
 ```bash
 ./mvnw test
 ```
@@ -183,6 +126,7 @@ VALUES ('Administrador Principal', 'admin@tu-dominio.com', 'SUPER_ADMIN');
 ---
 
 ## 📍 Roadmap
+
 - 📩 Notificaciones automáticas por correo.
 - 📊 Generación de reportes PDF/CSV.
 - 📱 PWA / Modo móvil.
@@ -191,7 +135,9 @@ VALUES ('Administrador Principal', 'admin@tu-dominio.com', 'SUPER_ADMIN');
 ---
 
 ## 📜 Licencia
+
 Este proyecto está bajo la licencia **MIT**. Puedes usarlo, modificarlo y distribuirlo libremente con fines académicos o personales.
 
+---
 
 💡 *LapSync busca mejorar el acceso a la tecnología en entornos educativos, simplificando el proceso de préstamos de equipos y creando una experiencia moderna, fluida y segura para todos los usuarios.*
