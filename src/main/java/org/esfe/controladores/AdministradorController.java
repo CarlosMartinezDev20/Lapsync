@@ -8,8 +8,6 @@ import org.esfe.repositorios.IPenaltyRepository;
 import org.esfe.repositorios.IUserRepository;
 import org.esfe.repositorios.LaptopRepository;
 import org.esfe.servicios.interfaces.IAdminService;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.http.ResponseEntity;
@@ -29,8 +27,6 @@ import java.util.stream.Collectors;
 @Controller
 @RequestMapping("/administrador")
 public class AdministradorController {
-
-    private static final Logger log = LoggerFactory.getLogger(AdministradorController.class);
 
     private final IUserRepository userRepository;
     private final LaptopRepository laptopRepository;
@@ -213,6 +209,7 @@ public class AdministradorController {
     }
 
     @GetMapping("/editar/{id}")
+    @SuppressWarnings("null")
     public String mostrarFormularioEditar(@PathVariable Integer id, Model model, RedirectAttributes ra) {
         Optional<User> adminOpt = userRepository.findById(id);
         if (adminOpt.isPresent()) {
@@ -227,6 +224,7 @@ public class AdministradorController {
     }
 
     @PostMapping("/editar/{id}")
+    @SuppressWarnings("null")
     public String editarAdministrador(@PathVariable Integer id,
                                       @Valid @ModelAttribute("administrador") User administrador,
                                       BindingResult result,
@@ -250,6 +248,7 @@ public class AdministradorController {
 
         boolean passwordProvided = password != null && !password.trim().isEmpty();
         if (passwordProvided) {
+            assert password != null; // Garantizado por passwordProvided
             if (!password.equals(confirmPassword)) {
                 result.rejectValue("passwordHash", "error.password", "Las contraseñas no coinciden");
             }
@@ -305,6 +304,7 @@ public class AdministradorController {
     }
 
     @PostMapping("/eliminar/{id}")
+    @SuppressWarnings("null")
     public String eliminarAdministrador(@PathVariable Integer id, RedirectAttributes ra) {
         Optional<User> userOpt = userRepository.findById(id);
         if (userOpt.isEmpty()) {

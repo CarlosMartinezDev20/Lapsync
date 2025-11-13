@@ -2,7 +2,6 @@ package org.esfe;
 
 import org.esfe.modelos.Penalty;
 import org.esfe.modelos.User;
-import org.esfe.repositorios.IPenaltyRepository;
 import org.esfe.repositorios.IUserRepository;
 import org.esfe.servicios.interfaces.IPenaltyService;
 import org.junit.jupiter.api.BeforeEach;
@@ -10,7 +9,6 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors;
 import org.springframework.security.oauth2.core.user.OAuth2User;
 import org.springframework.security.oauth2.core.user.DefaultOAuth2User;
@@ -40,9 +38,6 @@ class PenaltyHistoryTest {
 
     @Autowired
     private IPenaltyService penaltyService;
-
-    @Autowired
-    private IPenaltyRepository penaltyRepository;
 
     @Autowired
     private IUserRepository userRepository;
@@ -157,6 +152,7 @@ class PenaltyHistoryTest {
     }
 
     @Test
+    @SuppressWarnings("null")
     void testVistaHistorialSanciones() throws Exception {
         // Crear algunas sanciones para mostrar en la vista
         penaltyService.crearSancionDanioFisico(testUser, "Sanción de prueba 1", 30.0);
@@ -185,8 +181,8 @@ class PenaltyHistoryTest {
     @Test
     void testFiltradoPorEstado() {
         // Crear sanciones con diferentes estados
-        Penalty activa1 = penaltyService.crearSancionDanioFisico(testUser, "Activa 1", 20.0);
-        Penalty activa2 = penaltyService.crearSancionExcesoTiempo(testUser, "Activa 2");
+        penaltyService.crearSancionDanioFisico(testUser, "Activa 1", 20.0);
+        penaltyService.crearSancionExcesoTiempo(testUser, "Activa 2");
         Penalty resuelta = penaltyService.crearSancionSacarEquipo(testUser, "Resuelta", 50.0);
 
         // Resolver una sanción

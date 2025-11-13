@@ -17,6 +17,8 @@ public class EstudianteController {
             model.addAttribute("nombre", principal.getAttribute("name"));
             // Agregar el correo del usuario
             model.addAttribute("email", principal.getAttribute("email"));
+            // Agregar la foto de perfil de Google
+            model.addAttribute("foto", principal.getAttribute("picture"));
         }
         // Mostrar modelos en la vista
         model.addAttribute("titulo", "Bienvenido a LapSync");

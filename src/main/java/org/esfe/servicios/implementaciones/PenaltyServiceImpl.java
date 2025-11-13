@@ -32,11 +32,13 @@ public class PenaltyServiceImpl implements IPenaltyService {
     }
 
     @Override
+    @SuppressWarnings("null")
     public Optional<Penalty> buscarPorId(Integer id) {
         return penaltyRepository.findById(id);
     }
 
     @Override
+    @SuppressWarnings("null")
     public void eliminar(Integer id) {
         penaltyRepository.deleteById(id);
     }
@@ -72,6 +74,7 @@ public class PenaltyServiceImpl implements IPenaltyService {
     }
 
     @Override
+    @SuppressWarnings("null")
     public Penalty resolverSancion(Integer penaltyId) {
         Optional<Penalty> penaltyOpt = penaltyRepository.findById(penaltyId);
         if (penaltyOpt.isPresent()) {

@@ -2,7 +2,6 @@ package org.esfe.servicios.implementaciones;
 
 import org.esfe.modelos.Laptop;
 import org.esfe.repositorios.LaptopRepository;
-import org.esfe.servicios.implementaciones.LaptopService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -26,6 +25,7 @@ public class LaptopServiceImpl implements LaptopService {
 
     // HU24: Actualizar laptop
     @Override
+    @SuppressWarnings("null")
     public Laptop updateLaptop(Integer id, Laptop laptopDetails) {
         return laptopRepository.findById(id).map(laptop -> {
             laptop.setAssetTag(laptopDetails.getAssetTag());
@@ -40,6 +40,7 @@ public class LaptopServiceImpl implements LaptopService {
 
     // HU26: Desactivar (marcar fuera de uso)
     @Override
+    @SuppressWarnings("null")
     public void deactivateLaptop(Integer id) {
         laptopRepository.findById(id).ifPresent(laptop -> {
             laptop.setStatus("retired");
@@ -50,6 +51,7 @@ public class LaptopServiceImpl implements LaptopService {
 
     // HU25: Consultar laptop por ID
     @Override
+    @SuppressWarnings("null")
     public Optional<Laptop> getLaptopById(Integer id) {
         return laptopRepository.findById(id);
     }

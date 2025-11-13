@@ -22,7 +22,9 @@
     <script>
         !function(){
           try{
-            const t = localStorage.getItem('theme')
+            const role = 'student'; // vista de estudiante
+            const key = 'theme_' + role;
+            const t = localStorage.getItem(key)
               || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark':'light');
             document.documentElement.setAttribute('data-theme', t);
             document.documentElement.style.colorScheme = t;
@@ -333,7 +335,7 @@
         Swal.fire({
           icon: 'success',
           title: '¡Éxito!',
-          text: [[${successMessage}]],
+          text: /*[[${successMessage}]]*/ '',
           showConfirmButton: true,
           timer: 2000
         })

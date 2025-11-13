@@ -2,7 +2,6 @@ package org.esfe.servicios.implementaciones;
 
 import org.esfe.modelos.DamageReport;
 import org.esfe.modelos.Laptop;
-import org.esfe.servicios.implementaciones.DamageReportService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

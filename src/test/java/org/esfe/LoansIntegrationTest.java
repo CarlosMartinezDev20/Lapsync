@@ -37,6 +37,7 @@ class LoansIntegrationTest {
     private Laptop testLaptop;
 
     @BeforeEach
+    @SuppressWarnings("null")
     void setUp() {
         // Create test user
         testUser = new User();
@@ -59,6 +60,7 @@ class LoansIntegrationTest {
     }
 
     @Test
+    @SuppressWarnings("null")
     void testCreateAndRetrieveLoan() {
         // Given
         Loans loan = new Loans();
@@ -81,6 +83,7 @@ class LoansIntegrationTest {
     }
 
     @Test
+    @SuppressWarnings("null")
     void testLoanWorkflowProgression() {
         // Given - Create initial loan
         Loans loan = createTestLoan();
@@ -142,6 +145,7 @@ class LoansIntegrationTest {
     }
 
     @Test
+    @SuppressWarnings("null")
     void testDeleteLoan() {
         // Given
         Loans loan = createTestLoan();

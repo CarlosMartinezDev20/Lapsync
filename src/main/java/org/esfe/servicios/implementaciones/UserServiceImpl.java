@@ -48,6 +48,7 @@ public class UserServiceImpl implements IUserService {
     }
 
     @Override
+    @SuppressWarnings("null")
     public Optional<User> buscarPorId(Integer id){
         return userRepository.findById(id);
     }

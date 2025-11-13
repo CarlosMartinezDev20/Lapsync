@@ -28,7 +28,6 @@ import org.springframework.http.ResponseEntity;
 import com.itextpdf.text.*;
 import com.itextpdf.text.pdf.*;
 import java.io.ByteArrayOutputStream;
-import java.io.IOException;
 
 
 @Controller
@@ -57,6 +56,10 @@ public class PenaltyController {
                 model.addAttribute("sancionesActivas", sancionesActivas);
                 model.addAttribute("usuario", user);
                 model.addAttribute("titulo", "Mi Historial de Sanciones");
+                // Agregar foto de perfil de Google
+                model.addAttribute("nombre", principal.getAttribute("name"));
+                model.addAttribute("email", principal.getAttribute("email"));
+                model.addAttribute("foto", principal.getAttribute("picture"));
             }
         }
         return "sanciones/mis-sanciones";
@@ -197,7 +200,7 @@ public class PenaltyController {
             // Crear documento PDF
             Document document = new Document(PageSize.A4);
             ByteArrayOutputStream baos = new ByteArrayOutputStream();
-            PdfWriter writer = PdfWriter.getInstance(document, baos);
+            PdfWriter.getInstance(document, baos);
 
             document.open();
 

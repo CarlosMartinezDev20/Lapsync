@@ -54,6 +54,7 @@ public class AdministradorControllerTest {
     }
 
     @Test
+    @SuppressWarnings("null")
     void testListarAdministradores() {
         when(userRepository.findAll()).thenReturn(Arrays.asList(administrador));
         String viewName = administradorController.listarAdministradores(model);
@@ -62,6 +63,7 @@ public class AdministradorControllerTest {
     }
 
     @Test
+    @SuppressWarnings("null")
     void testMostrarFormularioCrear() {
         String viewName = administradorController.mostrarFormularioCrear(model);
         assertEquals("Administrador/crear", viewName);
@@ -69,6 +71,7 @@ public class AdministradorControllerTest {
     }
 
     @Test
+    @SuppressWarnings("null")
     void testCrearAdministradorExitoso() {
         User nuevoAdmin = new User();
         nuevoAdmin.setFullName("María García");
@@ -82,6 +85,7 @@ public class AdministradorControllerTest {
     }
 
     @Test
+    @SuppressWarnings("null")
     void testCrearAdministradorConPasswordsNoCoincidentes() {
         // Arrange
         User nuevoAdmin = new User();
@@ -116,6 +120,7 @@ public class AdministradorControllerTest {
     }
 
     @Test
+    @SuppressWarnings("null")
     void testEditarAdministradorExitoso() {
         User adminEditado = new User();
         adminEditado.setFullName("Juan Carlos Pérez");

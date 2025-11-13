@@ -58,6 +58,7 @@ public class LoansServiceImpl implements ILoansService {
     }
 
     @Override
+    @SuppressWarnings("null")
     public Loans buscarPorId(Integer id) {
         return loansRepository.findById(id).orElse(null);
     }

@@ -25,7 +25,8 @@
     <script>
         !function(){
           try{
-            const t = localStorage.getItem('theme')
+            const key = 'theme_admin';
+            const t = localStorage.getItem(key)
               || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark':'light');
             document.documentElement.setAttribute('data-theme', t);
             document.documentElement.style.colorScheme = t;
@@ -69,7 +70,7 @@
     <section class="page-wrap subnav">
         <div class="subnav__top">
             <div class="subnav__left">
-                <a th:href="@{/solicitudEstudiante}" class="btn btn-secondary btn-compact">
+                <a th:href="@{/solicitudes-usuario/{id}(id=${usuario.id})}" class="btn btn-secondary btn-compact">
                     <i class="bi bi-arrow-left"></i> Volver
                 </a>
             </div>

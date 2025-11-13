@@ -53,6 +53,10 @@ public class MisPrestamosController {
 
         // Agregar la lista de préstamos al modelo para mostrarlos en la vista
         model.addAttribute("loans", prestamos);
+        // Agregar datos del usuario autenticado
+        model.addAttribute("nombre", principal.getAttribute("name"));
+        model.addAttribute("email", principal.getAttribute("email"));
+        model.addAttribute("foto", principal.getAttribute("picture"));
         return "Estudiante/prestamos";
     }
 }
